@@ -54,7 +54,19 @@ document.write("4. User Agent(navigator.userAgent) : " +navigator.userAgent +"<p
 document.write("5. 사용언어(navigator.language): " +navigator.language +"<p>")
 document.write("6. 사용시스템(navigator.platform): " +navigator.platform+"<p>" )
 //-->
+<!--
+var aa, bb;
+var cc;
+aa=100;
+bb=250;
+cc=aa+bb;
+document.write("<a href=\"sms:?body=내용입니다\\n안녕하세요...\">문자전송(안드로이드-전화번호no)</a><p>")
+document.write("<a href=\"sms:?body=내용입니다\n안녕하세요...\">문자전송(안드로이드-전화번호no)</a><p>")
+document.write("<a href=\"sms:?body=내용입니다안녕하세요... \"+cc+\"원입니다\">문자전송(안드로이드-전화번호no)</a><p>")
 
+document.write("aa+bb="+cc+"입니다<p>")
+
+//-->
 </script>
 
 
