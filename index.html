@@ -47,7 +47,7 @@
 
      <script language="javascript1.2">
 <!--
-document.write(" 1. 애플리케이션이름(navigator.appName) : " +navigator.appName +"<p>")
+document.write("1. 애플리케이션이름(navigator.appName) : " +navigator.appName +"<p>")
 document.write("2. 브라우저버전(navigator.appVersion): " +navigator.appVersion +"<p>")
 document.write("3. 브라우저코이름(navigator.appCodeName): " +navigator.appCodeName +"<p>")
 document.write("4. User Agent(navigator.userAgent) : " +navigator.userAgent +"<p>")
@@ -60,9 +60,9 @@ var cc;
 aa=100;
 bb=250;
 cc=aa+bb;
-document.write("<a href=\"sms:?body=내용입니다\n안녕하세요...\">문자전송(안드로이드-전화번호no)</a><p> +\"<p>\"")
-document.write("<a href=\"sms:?body=내용입니다안녕하세요...\">문자전송(안드로이드-전화번호no)</a><p> +\"<p>\"")
-document.write("<a href=\"sms:?body=내용입니다안녕하세요... \"+cc+\"원입니다\">문자전송(안드로이드-전화번호no)</a><p> +\"<p>\"")
+document.write("<a href=\"sms:?body=내용입니다.\\n안녕하세요...\">문자전송(안드로이드-전화번호no)</a><p>\")
+document.write("<a href=\"sms:?body=내용입니다\\n안녕하세요...\">문자전송(안드로이드-전화번호no)</a><p>\")
+document.write("<a href=\"sms:?body=내용입니다안녕하세요... \"+cc+\"원입니다\">문자전송(안드로이드-전화번호no)</a><p>\")
 //-->
 </script>
 
