@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<!-- 모바일이나 핸드폰에 적절한 크기로 보이게 하는 코드 --> 
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <meta name="viewport" 
+
+        content="width=device-width
+
+                , user-scalable=yes
+
+                ,initial-scale=1.0
+
+                , maximum-scale=3.0" />
+
+    <title></title>
+
+<style>
+input, div {
+     width:300px;
+     
+     text-align:right;
+}
+div {
+     
+     color:red; 
+     font-size:130%;
+}
+</style>
+<script>
+//콤마찍기
+function comma(str) {
+    str = String(str);
+    return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+}
+//콤마풀기
+
+//콤마풀기
+function uncomma(str) {
+    str = String(str);
+    return str.replace(/[^\d]+/g, '');
+}
+//input box에서 사용자 입력시 바로 콤마를 찍어주기 위한 함수도 추가 한다.
+
+    
+function inputNumberFormat(obj) {
+    var tem=String(obj.value);
+   
+    var tem2=uncomma(tem);
+    var tem3= comma(tem2);
+   
+    var randValNode3 = document.getElementById("rand-val3");
+        randValNode3.innerHTML = "<b>"+tem3+"원</font></b>"
+}
+</script>
+<body> 
+<div id="rand-val3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<input type="number" onkeyup="inputNumberFormat(this)" placeholder="금액을 입력하세요" />
+
+
+</body> 
+</html>
