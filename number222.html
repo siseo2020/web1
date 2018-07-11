@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<!-- 모바일이나 핸드폰에 적절한 크기로 보이게 하는 코드 --> 
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <meta name="viewport" 
+
+        content="width=device-width
+
+                , user-scalable=yes
+
+                ,initial-scale=1.0
+
+                , maximum-scale=3.0" />
+
+    <title></title>
+
+<style>
+input {
+     text-align:right;
+}
+</style>
+<script>
+//콤마찍기
+function comma(str) {
+    str = String(str);
+    return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+}
+//콤마풀기
+
+//콤마풀기
+function uncomma(str) {
+    str = String(str);
+    return str.replace(/[^\d]+/g, '');
+}
+//input box에서 사용자 입력시 바로 콤마를 찍어주기 위한 함수도 추가 한다.
+
+
+function inputNumberFormat(obj) {
+    if obj.value === null {
+        var tem = String(obj.value);
+        var tem2=uncomma(tem);
+        var tem3= comma(tem2);
+        obj.value = tem3;
+    }else{
+    
+    var ten=String(obj.value);
+    var tem=tem3+ten.charAt(ten.length-1);
+    obj.value="";
+    var tem2=uncomma(tem);
+    var tem3= comma(tem2);
+    obj.value = tem3;
+    } 
+    var randValNode1 = document.getElementById("rand-val1");
+	randValNode1.innerHTML = "<b><font color='red'>"+tem+"</font></b>"
+    var randValNode2 = document.getElementById("rand-val2");
+        randValNode2.innerHTML = "<b><font color='red'>"+tem2+"</font></b>"
+    var randValNode3 = document.getElementById("rand-val3");
+        randValNode3.innerHTML = "<b><font color='red'>"+obj.value+"</font></b>"
+}
+</script>
+<body> 
+<input type="text" onkeyup="inputNumberFormat(this)" />
+<div id="rand-val1">Let's generate random Value1</div>
+<div id="rand-val2">Let's generate random Value2</div>
+<div id="rand-val3">Let's generate random Value3</div>
+</body> 
+</html>
